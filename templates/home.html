@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="static/images/logo.png" alt="logo.png">
+                <a href="/index">
+                    <button class="buttonNav"></button>
+                </a>
+                <h1>Wild Dump Prevention</h1>
+            </nav>
+        </header>
+        <div class="center">
+            <div class="shearch">
+                <h1 style="color: black; opacity: 0.9; background: white; padding: 0 20px; margin: 0 500px">Bienvenue sur WDP !</h1>
+                <div class="article">
+                    <a href="https://www.herault.gouv.fr/Politiques-publiques/Environnement-risques-naturels-et-technologiques/Nature-et-Biodiversite/Police-de-la-Nature/Depot-sauvage-de-dechets/Depot-illegal-de-dechets#:~:text=L'article%20L.,%E2%82%AC%20les%20d%C3%A9p%C3%B4ts%20de%20d%C3%A9chets.">
+                        <img src="static/images/article1.png" alt="article1.png">
+                    </a>
+                    <h3>La prolifération anarchique des épaves et des dépôts illégaux de déchets constitue une nuisance pour l’environnement et porte atteinte à l’harmonie et à la qualité des espaces naturels. Un dépôt illégal est un dépôt d’ordures, quel qu’en soit la nature ou le volume, en un lieu où il ne devrait pas être. Ils représentent une menace quant au risque d’incendie, de blessure, d’intoxication… et provoquent des nuisances visuelles et olfactives.</h3>
+                </div>
+                <div class="article">
+                    <a href="https://www.lagazettedescommunes.com/713298/depot-de-dechets-deux-decrets-modifient-les-regles-de-verbalisation/">
+                        <img src="static/images/article2.jpg" alt="article2.jpg">
+                    </a>
+                    <h3>Deux décrets modifient le cadre juridique de la verbalisation en matière de dépôts de déchets au titre du code pénal. Le premier précise les conditions d’habilitation et d’assermentation des agents des collectivités territoriales désormais autorisés à constater ces infractions. Le second détaille les contours de certaines infractions et augmente même les peines de l’une d'entre elles.</h3>
+                </div>
+                <div class="article">
+                    <a href="https://leparticulier.lefigaro.fr/article/le-depot-sauvage-d-ordures-peut-couter-cher">
+                        <img src="static/images/article3.png" alt="article3.png">
+                    </a>
+                    <h3>Pour lutter contre les dépôts sauvages de déchets, le maire peut dorénavant infliger une amende allant jusqu’à 15 000 €, en plus des sanctions pénales qui peuvent être prononcées. Propriétaires et locataires de terrain doivent être vigilants à ne pas se rendre complices</h3>
+                </div>
+                <div class="article">
+                    <a href="https://www.valoservices.suez.fr/conseils/blog/lutter-contre-depots-sauvages">
+                        <img src="static/images/article4.jpg" alt="article4.jpg">
+                    </a>
+                    <h3>Abandonner ses déchets sur la voie publique est une pratique fréquente. Ordures ménagères, gravats, encombrants, … les déchets sauvages sont nombreux, on estime à plus de 20 kg de déchets sauvages, tous confondus, la quantité abandonnée chaque année par habitant en France. Des incivilités qui coûtent cher aux collectivités et nuisent à l’environnement. Quelles mesures prendre pour lutter contre les dépôts sauvages ?</h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

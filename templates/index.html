@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+        <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/">
+                    <img src="static/images/logo.png" alt="logo.png"> 
+                </a>
+                <h1>Wild Dump Prevention</h1>
+            </nav>
+        </header>
+        
+        <div class="center">
+            <div class="shearch">
+                <form action="{{url_for('scdPage')}}" method="post">
+                    <h1 style="color: black; opacity: 0.9; background: white; padding: 0 20px;  width: 475px; margin: auto;">Choisissez un mode de recherche :</h1>
+                    <br>
+                    <select name="variable1" id="variable1">
+                        <option value="EPCI">EPCI</option>
+                        <option value="County">Département</option>
+                    </select>
+
+                    <br><br><br><br><br><br><br><br>
+                    <h1 style="color: black; opacity: 0.9; background: white; padding: 0 20px; width: 450px; margin: auto;">Si vous avez choisit les EPCI :</h1>
+                    <br>
+                    <select name="variable2" id="variable2">
+                        <option value="Bordeaux Métropole">Bordeaux Métropole</option>
+                        <option value="CA Bassin d'Arcachon Sud-Pôle Atlantique (COBAS)">CA Bassin d'Arcachon Sud-Pôle Atlantique (COBAS)</option>
+                        <option value="CA Bergeracoise">CA Bergeracoise</option>
+                        <option value="CA Grand Châtellerault">CA Grand Châtellerault</option>
+                        <option value="CA Le Grand Périgueux">CA Le Grand Périgueux</option>
+                        <option value="CA Pau Béarn Pyrénées">CA Pau Béarn Pyrénées</option>
+                        <option value="CA Royan Atlantique">CA Royan Atlantique</option>
+                        <option value="CA Val de Garonne Agglomération">CA Val de Garonne Agglomération</option>
+                        <option value="CA d'Agen">CA d'Agen</option>
+                        <option value="CA de La Rochelle">CA de La Rochelle</option>
+                        <option value="CA de Saintes">CA de Saintes</option>
+                        <option value="CA du Bassin d'Arcachon Nord">CA du Bassin d'Arcachon Nord</option>
+                        <option value="CA du Bassin de Brive">CA du Bassin de Brive</option>
+                        <option value="CA du Grand Angoulême">CA du Grand Angoulême</option>
+                        <option value="CA du Grand Cognac">CA du Grand Cognac</option>
+                        <option value="CA du Grand Dax">CA du Grand Dax</option>
+                        <option value="CA du Grand Guéret">CA du Grand Guéret</option>
+                        <option value="CA du Grand Villeneuvois">CA du Grand Villeneuvois</option>
+                        <option value="CA du Libournais">CA du Libournais</option>
+                        <option value="CA du Niortais">CA du Niortais</option>
+                        <option value="CA du Pays Basque">CA du Pays Basque</option>
+                        <option value="CC Albret Communauté">CC Albret Communauté</option>
+                        <option value="CC Aunis Atlantique">CC Aunis Atlantique</option>
+                        <option value="CC Aunis Sud">CC Aunis Sud</option>
+                        <option value="CC Castillon/Pujols">CC Castillon/Pujols</option>
+                        <option value="CC Charente-Arnoult-Coeur de Saintonge">CC Charente-Arnoult-Coeur de Saintonge</option>
+                        <option value="CC Coeur de Charente">CC Coeur de Charente</option>
+                        <option value="CC Isle Double Landais">CC Isle Double Landais</option>
+                        <option value="CC Jalle-Eau-Bourde">CC Jalle-Eau-Bourde</option>
+                        <option value="CC La Rochefoucauld - Porte du Périgord">CC La Rochefoucauld - Porte du Périgord</option>
+                        <option value="CC Latitude Nord Gironde">CC Latitude Nord Gironde</option>
+                        <option value="CC Lavalette Tude Dronne">CC Lavalette Tude Dronne</option>
+                        <option value="CC Maremne Adour Côte Sud">CC Maremne Adour Côte Sud</option>
+                        <option value="CC Monts et Vallées Ouest Creuse">CC Monts et Vallées Ouest Creuse</option>
+                        <option value="CC Médoc Atlantique">CC Médoc Atlantique</option>
+                        <option value="CC Médoc Coeur de Presqu'île">CC Médoc Coeur de Presqu'île</option>
+                        <option value="CC Médoc Estuaire">CC Médoc Estuaire</option>
+                        <option value="CC Médullienne">CC Médullienne</option>
+                        <option value="CC Ouest Limousin">CC Ouest Limousin</option>
+                        <option value="CC Porte d'Aquitaine en Pays de Serres">CC Porte d'Aquitaine en Pays de Serres</option>
+                        <option value="CC Portes de la Creuse en Marche">CC Portes de la Creuse en Marche</option>
+                        <option value="CC Périgord-Limousin">CC Périgord-Limousin</option>
+                        <option value="CC Val de Charente">CC Val de Charente</option>
+                        <option value="CC Val de Gâtine">CC Val de Gâtine</option>
+                        <option value="CC Vals de Saintonge">CC Vals de Saintonge</option>
+                        <option value="CC de Blaye">CC de Blaye</option>
+                        <option value="CC de Charente Limousine">CC de Charente Limousine</option>
+                        <option value="CC de Gémozac et de la Saintonge Viticole">CC de Gémozac et de la Saintonge Viticole</option>
+                        <option value="CC de Mimizan">CC de Mimizan</option>
+                        <option value="CC de Montesquieu">CC de Montesquieu</option>
+                        <option value="CC de Portes Sud Périgord">CC de Portes Sud Périgord</option>
+                        <option value="CC de Ventadour - Egletons - Monédières">CC de Ventadour - Egletons - Monédières</option>
+                        <option value="CC de l'Estuaire">CC de l'Estuaire</option>
+                        <option value="CC de l'Ile d'Oléron">CC de l'Ile d'Oléron</option>
+                        <option value="CC de l'Ile de Ré">CC de l'Ile de Ré</option>
+                        <option value="CC de la Haute Saintonge">CC de la Haute Saintonge</option>
+                        <option value="CC de la Vallée d'Ossau">CC de la Vallée d'Ossau</option>
+                        <option value="CC de la Vallée de l'Homme">CC de la Vallée de l'Homme</option>
+                        <option value="CC des 4B Sud Charente">CC des 4B Sud Charente</option>
+                        <option value="CC des Bastides Dordogne-Périgord">CC des Bastides Dordogne-Périgord</option>
+                        <option value="CC des Grands Lacs">CC des Grands Lacs</option>
+                        <option value="CC des Portes de l'Entre-Deux-Mers">CC des Portes de l'Entre-Deux-Mers</option>
+                        <option value="CC des Vallées du Clain">CC des Vallées du Clain</option>
+                        <option value="CC du Civraisien en Poitou">CC du Civraisien en Poitou</option>
+                        <option value="CC du Confluent et des Coteaux de Prayssas">CC du Confluent et des Coteaux de Prayssas</option>
+                        <option value="CC du Créonnais">CC du Créonnais</option>
+                        <option value="CC du Fronsadais">CC du Fronsadais</option>
+                        <option value="CC du Grand Cubzaguais">CC du Grand Cubzaguais</option>
+                        <option value="CC du Grand Saint Emilionnais">CC du Grand Saint Emilionnais</option>
+                        <option value="CC du Haut Béarn">CC du Haut Béarn</option>
+                        <option value="CC du Pays de Fénelon">CC du Pays de Fénelon</option>
+                        <option value="CC du Pays de Saint Aulaye">CC du Pays de Saint Aulaye</option>
+                        <option value="CC du Périgord Nontronnais">CC du Périgord Nontronnais</option>
+                        <option value="CC du Rouillacais">CC du Rouillacais</option>
+                        <option value="CC du Réolais en Sud Gironde">CC du Réolais en Sud Gironde</option>
+                        <option value="CC du Secteur de Saint-Loubès">CC du Secteur de Saint-Loubès</option>
+                        <option value="CC du Sud Gironde">CC du Sud Gironde</option>
+                        <option value="CC du Terrassonnais en Périgord Noir Thenon Hautefort">CC du Terrassonnais en Périgord Noir Thenon Hautefort</option>
+                        <option value="CC du Val de l'Eyre">CC du Val de l'Eyre</option>
+                        <option value="CC rurales de l'Entre-Deux-Mers">CC rurales de l'Entre-Deux-Mers</option>
+                        <option value="CU Limoges Métropole">CU Limoges Métropole</option>
+                        <option value="CU du Grand Poitiers">CU du Grand Poitiers</option>
+                    </select>
+
+                    <br><br><br>
+                    <h1 style="color: black; opacity: 0.9; background: white; padding: 0 20px; width: 550px; margin: auto;">Si vous avez choisit les départements :</h1>
+                    <br>
+                    <select name="variable3" id="variable3">
+                        <option value="Charente">Charente</option>
+                        <option value="Charente-Maritime">Charente-Maritime</option>
+                        <option value="Corrèze">Corrèze</option>
+                        <option value="Creuse">Creuse</option>
+                        <option value="Deux-Sèvres">Deux-Sèvres</option>
+                        <option value="Dordogne">Dordogne</option>
+                        <option value="Gironde">Gironde</option>
+                        <option value="Haute-Vienne">Haute-Vienne</option>
+                        <option value="Landes">Landes</option>
+                        <option value="Lot-et-Garonne">Lot-et-Garonne</option>
+                        <option value="Pyrénées-Atlantiques">Pyrénées-Atlantiques</option>
+                        <option value="Vienne">Vienne</option>
+                    </select>
+                    <br><br><br>
+                    <button type="submit" ></button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

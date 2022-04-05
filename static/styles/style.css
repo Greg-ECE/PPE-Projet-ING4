@@ -1,0 +1,159 @@
+body {
+    background-image: url("../images/foret.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+    margin: 0px;
+  }
+
+  .button {
+    background-color: #1c87c9;
+    box-shadow: 0 5px 0 #105cad;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    background-image: url("../images/shearch.jpg");
+    background-size: cover;
+    height: 44px;
+    width: 44px;
+    align-self: center;
+  }
+
+.buttonNav{
+    background-image: url("../images/shearch.jpg");
+    background-size: cover;
+    height: 44px;
+    width: 44px;
+    float: right;
+    opacity: 0.9;
+    height: 100%;
+    width: 90px;
+}
+
+nav {
+    background-color: white;
+    position: fixed;
+    height: 90px;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+nav h1 {
+    text-align: center;
+}
+
+nav img {
+    height: 100%;
+    float: left;
+}
+
+.center{
+    text-align:center;
+    vertical-align: middle;
+}
+
+#variable1{
+    height: 44px;
+    border: 1px;
+    overflow: hidden;
+    opacity: 0.9;
+    vertical-align: top;
+}
+#variable1::-moz-focus-inner {
+    border: 0;
+}
+#variable1:focus {
+    outline: none;
+}
+#variable1 option{
+    width: 60px;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border:rgb(204, 204, 0) solid 1px;
+    border-radius: 5px;
+    color:black;
+  }
+
+#variable2{
+    height: 44px;
+    border: 1px;
+    overflow: hidden;
+    opacity: 0.9;
+    vertical-align: top;
+}
+#variable2::-moz-focus-inner {
+    border: 0;
+}
+#variable2:focus {
+    outline: none;
+}
+#variable2 option{
+    width: 60px;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border:rgb(204, 204, 0) solid 1px;
+    border-radius: 5px;
+    color:black;
+}
+
+
+#variable3{
+    height: 44px;
+    border: 1px;
+    overflow: hidden;
+    opacity: 0.9;
+    vertical-align: top;
+}
+#variable3::-moz-focus-inner {
+    border: 0;
+}
+#variable3:focus {
+    outline: none;
+}
+#variable3 option{
+    width: 60px;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border:rgb(204, 204, 0) solid 1px;
+    border-radius: 5px;
+    color:black;
+}
+
+.article{
+  margin: 0 200px;
+  background-color: white;
+  opacity: 0.9;
+  height: 150px;
+  z-index: 2;
+}
+
+.article img{
+  float: left;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.article h3 {
+  vertical-align: auto;
+  text-align: left;
+  padding: 15px
+}
